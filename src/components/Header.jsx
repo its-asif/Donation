@@ -12,7 +12,7 @@ const Header = () => {
       <div className="hero-overlay bg-opacity-90 bg-white"></div>
       <div className="hero-content text-center text-neutral-content">
         <div>
-          <h1 className="mb-5 text-5xl font-bold mb-16">
+          <h1 className="mb-5 text-5xl font-bold mb-16 text-black">
             I Grow By Helping People In Need
           </h1>
           <div className="join ">
