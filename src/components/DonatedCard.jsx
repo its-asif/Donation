@@ -7,8 +7,8 @@ const DonatedCard = ({data}) => {
     return (
 
         <div>
-            <div className="card card-side mx-5" style={{backgroundColor : card_bg_color}}>
-            <figure><img src={picture_sq} alt="Movie"/></figure>
+            <div className="card card-side m-5" style={{backgroundColor : card_bg_color}}>
+            <figure><img src={picture_sq} className="h-full"/></figure>
             <div className="card-body">
                 <p className="w-fit p-2 rounded-md font-semibold mb-2" 
                 style={{backgroundColor : category_bg_color, color: text_and_button_bg_color}}
