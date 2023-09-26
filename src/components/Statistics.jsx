@@ -1,19 +1,31 @@
-import { LineChart, Line } from 'recharts';
+import React from "react";
+import { Chart } from "react-google-charts";
+import { getStoredDonations } from "../utility/localstorage";
+
 
 const Statistics = () => {
+    const donationData = getStoredDonations();
+    const donationCount = donationData.length;
+    const total = 12 - donationCount;
 
-    const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}];
-    const renderLineChart = (
-        <LineChart width={400} height={400} data={data}>
-          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-        </LineChart>
-      );
+    const data = [
+        ["Task", "Hours per Day"],
+        ["Your Donation", donationCount],
+        ["Total Donation", total],
+      ];
       
+    const options = {
+        title: "My Daily Activities",
+      };
 
     return (
         <div>
-            <h1>thsi is stattixs page</h1>
-            {renderLineChart}
+            <Chart
+                chartType="PieChart"
+                data={data}
+                width={"100%"}
+                height={"800px"}
+            />
         </div>
     );
 };

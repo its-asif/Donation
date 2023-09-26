@@ -31,7 +31,7 @@ const Donation = () => {
                 donatedCatagory.slice(0, dataLength).map(x => <DonatedCard data = {x} ></DonatedCard>)
             }
             </div>
-            <div className={`text-center ${dataLength === donatedCatagory.length ? 'hidden' : ''}`}>
+            <div className={`text-center ${(dataLength === donatedCatagory.length || donatedCatagory.length <= 4) ? 'hidden' : ''}`}>
             <button className=" text-2xl p-4 px-6 rounded-md font-bold bg-[#009444] text-white "
                 onClick={() => setDataLength(donatedCatagory.length)}
             >See All</button>
