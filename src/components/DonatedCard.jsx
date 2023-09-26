@@ -7,7 +7,7 @@ const DonatedCard = ({data}) => {
     return (
 
         <div>
-            <div className="card card-side m-5" style={{backgroundColor : card_bg_color}}>
+            <div className="card card-side m-5 flex-col md:flex-row" style={{backgroundColor : card_bg_color}}>
             <figure><img src={picture_sq} className="h-full"/></figure>
             <div className="card-body">
                 <p className="w-fit p-2 rounded-md font-semibold mb-2" 

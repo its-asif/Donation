@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {  
   return (
-    <div className="navbar p-12 px-32">
+    <div className="navbar md:p-12 md:px-32">
       <div className="navbar-start">
-        <div className="dropdown">
+        <div className="dropdown mr-20 lg:mr-0">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,18 +26,12 @@ const NavBar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52  text-2xl font-medium"
           >
-            <li>
-              <a>Home</a>
-            </li>
-            <li>
-              <a>Donation</a>
-            </li>
-            <li>
-              <a>Statistics</a>
-            </li>
+            <li><NavLink to="/" className="mx-5">Home</NavLink></li>
+            <li><NavLink to="/donation" className="mx-5">Donation</NavLink></li>
+            <li><NavLink to="/statistics" className="mx-5">Statistics</NavLink></li>
           </ul>
         </div>
-        <img src="https://i.ibb.co/C9ZMXxD/Logo.png" alt="Logo" border="0" className="w-64"></img>
+        <img src="https://i.ibb.co/C9ZMXxD/Logo.png" alt="Logo" border="0" className="w-64 "></img>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal text-xl font-medium">

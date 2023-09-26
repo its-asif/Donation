@@ -26,7 +26,7 @@ const Donation = () => {
 
     return (
         <div className="mb-20">
-            <div className="grid grid-cols-2 m-16">
+            <div className="grid lg:grid-cols-2 m-16">
             {
                 donatedCatagory.slice(0, dataLength).map(x => <DonatedCard data = {x} ></DonatedCard>)
             }

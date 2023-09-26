@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
+import {setSearch} from "./filterBySearch.js"
 
 const Header = () => {
   return (
@@ -12,15 +13,18 @@ const Header = () => {
       <div className="hero-overlay bg-opacity-90 bg-white"></div>
       <div className="hero-content text-center text-neutral-content">
         <div>
-          <h1 className="mb-5 text-5xl font-bold mb-16 text-black">
+          <h1 className="mb-16 text-4xl md:text-5xl font-bold text-black">
             I Grow By Helping People In Need
           </h1>
           <div className="join ">
             <input
-              className="input input-bordered join-item w-96 text-black"
+              className="input input-bordered join-item md:w-96 text-black"
               placeholder="Search here..."
+              id = "input_cat"
             />
-            <button className="btn join-item rounded-r-md bg-[#ff444a] text-white font-bold w-28 border-none">Search</button>
+            <button className="btn join-item rounded-r-md bg-[#ff444a] text-white font-bold md:w-28 border-none"
+             onClick={() => setSearch(document.getElementById("input_cat").value)}>Search</button> 
+
           </div>
         </div>
       </div>

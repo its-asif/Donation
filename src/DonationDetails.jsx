@@ -25,7 +25,7 @@ const DonationDetails = () => {
     return (
         <div>
             <Toaster></Toaster>
-            <div className="m-20 rounded-md">
+            <div className="m-16 md:mx-36 rounded-md">
                 <div className="relative">
                     <img src={details.picture_rec} className="w-full"/>
                     <div className="bg-black bg-opacity-40 text-white p-8 text-xl absolute bottom-0 w-full ">
@@ -37,7 +37,7 @@ const DonationDetails = () => {
                 </div>
 
                 <h1 className="text-4xl font-bold mt-12">{details.title}</h1>
-                <p className="mt-6 font-xl text-slate-600">{details.description}</p>
+                <p className="mt-6 text-xl text-slate-600">{details.description}</p>
             </div>            
         </div>
     );

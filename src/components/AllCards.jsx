@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Card from "./Card";
-import { useLoaderData } from "react-router-dom";
+import { searchedKey } from "./filterBySearch";
 
 
 const AllCards = ({cards}) => {
-    
+
 
     return (
         <div>
-            <div className="grid grid-cols-4 m-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 m-16">
                 {
                     cards.map(x => <Card key={x.id} x={x}></Card>)
                 }
