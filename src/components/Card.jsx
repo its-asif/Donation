@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Card = ({x}) => {
     const {id, picture_rec, category, title, card_bg_color, category_bg_color, text_and_button_bg_color} = x;
-    console.log(x.card_bg_color);
+    // console.log(x.card_bg_color);
     
   return (
     <div className="mx-5 mb-12">
