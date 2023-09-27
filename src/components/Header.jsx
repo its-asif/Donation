@@ -1,8 +1,15 @@
-import React from "react";
-import NavBar from "./NavBar";
-import {setSearch} from "./filterBySearch.js"
+import { useState } from "react";
 
-const Header = () => {
+const Header = ({onSearch}) => {
+  const [searchKey, setSearchKey] = useState('');
+
+  const handleInputChange = (e) => {
+    setSearchKey(e.target.value);
+  };
+  const handleSearchClick = () => {
+      onSearch(searchKey);
+  };
+
   return (
     <div
       className="hero h-[500px]"
@@ -20,10 +27,12 @@ const Header = () => {
             <input
               className="input input-bordered join-item md:w-96 text-black"
               placeholder="Search here..."
-              id = "input_cat"
+              value={searchKey}
+              onChange={handleInputChange}
             />
             <button className="btn join-item rounded-r-md bg-[#ff444a] text-white font-bold md:w-28 border-none"
-             onClick={() => setSearch(document.getElementById("input_cat").value)}>Search</button> 
+             onClick={handleSearchClick}
+             >Search</button> 
 
           </div>
         </div>
