@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import Card from "./Card";
-import { searchedKey } from "./filterBySearch";
 
 
 const AllCards = ({cards, searchKey}) => {

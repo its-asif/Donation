@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Header from './Header';
 import AllCards from './AllCards';
 import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
-    const cards = useLoaderData();
+    const [cards, setcards] = useState([]);
+    
+    useEffect(() => {
+        fetch("data.json")
+          .then( res => res.json())
+          .then( data => setcards(data));
+      }, []);
 
     const [searchKey, setSearchKey] = useState('');
 
